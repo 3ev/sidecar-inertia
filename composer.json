@@ -10,8 +10,8 @@
         }
     ],
     "require": {
-        "php": "^7.2|^8.0",
-        "hammerstone/sidecar": "^0.3.9",
+        "php": ">=8.0",
+        "hammerstone/sidecar": ">=0.3.9",
         "inertiajs/inertia-laravel": "^0.5.1|^0.6.0|^2.0"
     },
     "require-dev": {
