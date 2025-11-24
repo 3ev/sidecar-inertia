@@ -93,12 +93,6 @@ class SSR extends LambdaFunction
     {
         Sidecar::log('Compiling Inertia SSR bundle.');
 
-        Sidecar::log('DEBUG: Sidecar access key: ' . config('sidecar.aws_key'));
-        Sidecar::log('DEBUG: Sidecar secret access key: ' . config('sidecar.aws_secret'));
-        Sidecar::log('DEBUG: Sidecar region: ' . config('sidecar.aws_region'));
-        Sidecar::log('DEBUG: Sidecar bucket name: ' . config('sidecar.aws_bucket'));
-        Sidecar::log('DEBUG: Sidecar execution role: ' . config('sidecar.execution_role'));
-
         $command = ['npx', 'mix', '--mix-config=webpack.ssr.mix.js'];
 
         if (Sidecar::getEnvironment() === 'production') {
