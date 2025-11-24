@@ -10,7 +10,7 @@ use Hammerstone\Sidecar\Package;
 use Hammerstone\Sidecar\Sidecar;
 use Illuminate\Support\Facades\Config;
 use Symfony\Component\Process\Process;
-use Tightenco\Ziggy\Ziggy;
+use Tighten\Ziggy\Ziggy;
 
 class SSR extends LambdaFunction
 {
@@ -78,7 +78,7 @@ class SSR extends LambdaFunction
     {
         // They have to turn it on, and the package must be installed.
         return Config::get('inertia.ssr.sidecar.ziggy', false)
-            && class_exists('\\Tightenco\\Ziggy\\Ziggy');
+            && class_exists('\\Tighten\\Ziggy\\Ziggy');
     }
 
     public function beforeDeployment()
